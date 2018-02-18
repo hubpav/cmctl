@@ -6,8 +6,8 @@ setup(
     version='1.0.0',
     description='Conductometer Control Tool',
     url='https://github.com/hubpav/cmctl',
-    author='Pavel Hübner',
-    author_email='pavel.hubner@hardwario.com',
+    author='Pavel Hubner',
+    author_email='pavel.hubner@gmail.com',
     license='MIT',
     keywords = ['conductometer', 'cli', 'tool'],
     classifiers=[
