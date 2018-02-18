@@ -1,6 +1,6 @@
 # Conductometer Control Tool
 
-This is the CLI tool to control a 12-channel _conductometer_ we haved developed for [**Centrum výzkumu Řež s.r.o.**](http://cvrez.cz/).
+This is the CLI tool to control a 12-channel _conductometer_ we haved developed for [**Centrum výzkumu Řež**](http://cvrez.cz/).
 
 > Note: Conductometer is a device that can be used for various scientific purposes - e.g. to measure conductivity of liquids.
 
