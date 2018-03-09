@@ -25,7 +25,7 @@ def devices():
 
 @cli.command()
 @click.option('--device', '-d', type=str, required=True, help='Device path.')
-@click.option('--interval', '-i', default=1, type=click.IntRange(1, 86400), help='Scan interval in milliseconds.')
+@click.option('--interval', '-i', default=1, type=click.IntRange(1, 86400), help='Scan interval in seconds.')
 @click.option('--frequency', '-f', default=10000, type=click.IntRange(10, 1000000), help='Modulation frequency in Hz.')
 @click.option('--filtering', '-q', default='none', type=click.Choice(FILTERS), help='Algorithm for filtering.')
 @click.option('--samples', '-a', default=1, type=click.IntRange(1, 256), help='Number of samples for filtering.')

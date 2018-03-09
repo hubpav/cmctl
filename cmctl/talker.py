@@ -15,7 +15,7 @@ class Talker:
     def __init__(self, device):
         '''Open device and flush buffers.'''
         exclusive = False if os.name == 'nt' or sys.platform == 'win32' else True
-        self._ser = serial.Serial(device, baudrate=9600, timeout=3, exclusive=exclusive)
+        self._ser = serial.Serial(device, baudrate=9600, timeout=3)
         time.sleep(0.5)
         self._ser.flush()
         self._ser.write(b'\x1b')
