@@ -10,6 +10,7 @@ from .talker import Talker, TalkerException
 FILTERS = ['none', 'average', 'hybrid', 'median']
 
 @click.group()
+@click.version_option()
 def cli():
     '''Conductometer Control Tool.'''
 
@@ -57,7 +58,7 @@ def scan(device, interval, frequency, filtering, samples, no_sync, channels):
         talker.command('Q0')
     talker.command('D%d' % (0 if no_sync else 1))
     while True:
-        record = datetime.datetime.now().isoformat(sep=' ', timespec='milliseconds')
+        record = datetime.datetime.now().isoformat(sep=' ', timespec='seconds')
         click.echo('Scanning at %s...' % (record), err=True)
         for i in range(1, 13):
             record += ';'
