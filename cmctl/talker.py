@@ -13,17 +13,12 @@ class TalkerException(Exception):
 class Talker:
     '''Class providing communication with device.'''
 
-
     def __init__(self, device):
         '''Open device and flush buffers.'''
-        exclusive = True
-        if os.name == 'nt' or sys.platform == 'win32':
-            exclusive = False
-        self._ser = serial.Serial(device, baudrate=9600, timeout=3, exclusive=exclusive)
+        self._ser = serial.Serial(device, baudrate=9600, timeout=3, exclusive=True)
         time.sleep(0.5)
         self._ser.flush()
         self._ser.write(b'\x1b')
-
 
     def command(self, command):
         '''Execute command on device.'''
@@ -32,7 +27,6 @@ class Talker:
         status = self._ser.readline().decode('ascii').rstrip()
         if not status or status != 'OK':
             raise TalkerException
-
 
     def query(self, query):
         '''Execute query on device (command with expected response).'''

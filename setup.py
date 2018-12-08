@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name='cmctl',
     packages=['cmctl'],
-    version='1.0.5',
+    version='1.0.6',
     description='Conductometer Control Tool',
     url='https://github.com/hubpav/cmctl',
     author='Pavel Hubner',
@@ -21,7 +21,7 @@ setup(
         'Intended Audience :: Science/Research'
     ],
     install_requires=[
-        'click==6.7', 'pyserial==3.4'
+        'click==7.0', 'pyserial==3.4'
     ],
     entry_points='''
         [console_scripts]
